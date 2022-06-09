@@ -1,0 +1,29 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+    Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+
+        {{ if player.scenario_auc == 2 }}
+        <p>Der zufällig bestimmte Preis für den Rat des Algorithmus beträgt {{ player.dice }}. Dieser Preis ist höher als der Betrag, den Sie für den Ratschlag zu zahlen bereit sind, daher erhalten sie den Rat des Algorithmus nicht. </p>
+        {{ endif }}
+
+        {{ if player.scenario_auc == 1 }}
+        <p>Der zufällig bestimmte Preis für den Rat des Algorithmus beträgt {{ player.dice }}. Dieser Preis ist geringer als der Betrag, den Sie für den Ratschlag zu zahlen bereit sind, daher erhalten sie den Rat des Algorithmus.</p>
+
+            <p><b>Der Schätzwert des Algorithmus für Land {{ player.round_number }} beträgt {{ player.gdpcappredict }}.</b></p>
+        {{ endif }}
+
+        </div>
+    </div>
+
+    <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+    {{ endblock }}

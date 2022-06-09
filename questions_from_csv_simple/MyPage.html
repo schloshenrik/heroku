@@ -1,0 +1,31 @@
+{{ block title }}
+    Einschätzung Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+{{ block content }}
+
+   <p>
+       Welches BIP pro Kopf hat das Land mit den folgenden Daten?
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>gpdcappredict</th>
+            <th>gdpcap19</th>
+        </tr>
+
+        <tr>
+            <td>fff</td>
+            <td>fff</td>
+        </tr>
+    </table>
+
+
+    <p>
+        Das normierte BIP pro Kop liegt zwischen 0 und 100. Dabei beschreibt 100 das größte und 0 das niedrigste BIP pro Kopf.
+    </p>
+    {{ formfields }}
+
+    {{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,27 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Kontrollfragen{{ endblock }}
+
+{{ block content }}
+
+         <div style="text-align: justify;" class="card bg-light mb-3  ">
+            <div class="card-body">
+            <p><strong>Es ist für mich optimal den wahren Betrag anzugeben, den ich für die Einschätzung des Algorithmus bereit bin zu zahlen.</strong></p>
+            </div>
+
+            {{ if player.truewtp == True  }}
+            <p class="alert alert-success">Richtig! Das Zahlungsschema ist so konzipiert, dass Sie Ihre Auszahlung maximieren, indem Sie den wahren Betrag anzugeben, den Sie für die Einschätzung des Algorithmus bereit sind zu zahlen.</p>
+            {{ else }}
+            <p class="alert alert-danger">Falsch! Das Zahlungsschema ist so konzipiert, dass Sie Ihre Auszahlung maximieren, indem Sie den wahren Betrag anzugeben, den Sie für die Einschätzung des Algorithmus bereit sind zu zahlen.</p>
+            {{ endif }}
+
+         </div>
+             <br>
+
+
+              <!-- Weiter-Button  -->
+            <p>
+                <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+            </p>
+
+
+{{ endblock }}

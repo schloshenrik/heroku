@@ -1,0 +1,32 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+     Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+            <p>
+               Sie erhalten nun die Möglichkeit sich den <b>Schätzwert eines Algorithmus als Ratschlag für das BIP pro Kopf</b> einzuholen.
+            </p>
+            <p>Dem Algorithmus stehen genau die gleichen Informationen, wie Ihnen zur Verfügung. Dabei weichen XY % der Schätzungen des Algorithmus maximal 5 Punkte vom tatsächlichen BIP pro Kopf ab. [Alternativ: XY% der Schätzwerte des Algorithmus liegen in einem Intervall von [-5,+5] Punkten.]  Wenn Sie den Ratschlag nutzen, können Sie selbst bestimmen, welchen finalen Schätzwert Sie für das BIP pro Kopf angeben.</p>
+            <p>
+              Der <b>Ratschlag des Algorithmus kostet einen zufällig bestimmten Betrag (zwischen 0 und 25 Talern)</b>, der Ihnen nicht bekannt ist. Wenn der Betrag, den Sie für den Ratschlag zu zahlen bereit sind, höher ist als der zufällig gewählte Preis, werden Sie diesen Preis zahlen und erhalten den Ratschlag des Algorithmus.
+                Ist Ihre Zahlungsbereitschaft niedriger als der Preis, erhalten Sie keinen Ratschlag und müssen die Einschätzung selbst bestimmen.
+                Dadurch wird sichergestellt, dass Sie den wahren Betrag angeben, den Sie bereit sind für den Ratschlag des Algorithmus zu zahlen. </p>
+                <p>Die Wahrscheinlichkeit, dass Sie den Ratschlag des Algorithmus erhalten, steigt mit dem Betrag, den Sie zu zahlen bereit sind.
+                Das Zahlungsschema ist so konzipiert, dass Sie Ihre <b>Auszahlung maximieren</b>, indem Sie Ihre <b>wahren Wert angeben</b>, den Sie für den Ratschlag <b>bereit sind zu zahlen</b>.</p>
+                <p>Nachdem Sie die nachfolgenden Kontrollfragen beantwortet haben, können Sie sich entscheiden, ob Sie den Ratschlag des Algorithmus einholen möchten.</p>
+
+
+        </div>
+    </div>
+
+     <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+{{ endblock }}
+
+

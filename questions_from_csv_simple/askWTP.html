@@ -1,0 +1,30 @@
+{{ block title }}
+   Ask WTP
+{{ endblock }}
+{{ block content }}
+
+    <p>
+        Sie haben sich dazu entschieden den Rat des Algorithmus einholen zu wollen.
+    </p>
+
+    <p>
+        Die Wahrscheinlichkeit, dass die Entscheidung tatsächlich delegiert wird, steigt mit dem Betrag, den Sie zu zahlen bereit sind. Das Zahlungsschema ist so konzipiert, dass Sie Ihre Auszahlung maximieren, indem Sie Ihre wahre Zahlungsbereitschaft für die Übertragung Ihrer Investitionsentscheidungen angeben.
+        Sie müssen nicht genau wissen, wie das Zahlungsschema aufgebaut ist, sondern nur, dass Sie am besten wahrheitsgemäß antworten sollten.
+    </p>
+
+    <p>
+      Wir haben einen Preis für die Delegation festgelegt (zufällig gewählt zwischen 0 und 50 SEK), der Ihnen nicht bekannt ist. Wenn der Betrag, den Sie zu zahlen bereit sind, höher ist als unser Preis, werden Sie den Preis zahlen und Ihre Entscheidung wird delegiert.
+        Ist Ihre erklärte Zahlungsbereitschaft niedriger als der Preis, bleiben Sie bei den 25 Investitionsentscheidungen, die Sie selbst getroffen haben.
+        Der Grund, warum wir dieses scheinbar komplizierte Zahlungsschema gewählt haben, ist, dass wir vermeiden wollen, dass Sie strategische Motive haben, Ihre Zahlungsbereitschaft falsch anzugeben (z. B. durch die Angabe einer niedrigen Zahlungsbereitschaft).
+
+    </p>
+
+
+ <p> Bitte geben Sie Ihre Zahlungsbereitschaft für den Rat des ALgorithmus an:</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}
+
+

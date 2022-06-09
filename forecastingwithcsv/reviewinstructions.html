@@ -1,0 +1,79 @@
+ {% load otree %}
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Instruktionen</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+                <p>Bei nachfolgenden Daten handelt es sich um reale Datensätze der „World Bank“.</p>
+                <p>Folgende Variablen werden Ihnen für die Schätzung des BIP pro Kopf für jedes Land gegeben.</p>
+
+
+
+            <br>
+            <table class="table">
+                <tr>
+                    <td style="text-align:center;  font-weight: bold; color: #185177" >Variable</td>
+                    <td style="text-align:center;  font-weight: bold; color: #185177" >Erklärung</td>
+                    <td style="text-align:center;  font-weight: bold; color: #185177" >Niedrigster Wert</td>
+                    <td style="text-align:center;  font-weight: bold; color: #185177" >Höchster Wert</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #185177">Arbeitslosenquote</td>
+                    <td>Die Arbeitslosenquote bezieht sich auf den Anteil der Erwerbsbevölkerung, der ohne Arbeit ist, aber für eine Beschäftigung zur Verfügung steht und nach einer Beschäftigung sucht. Dabei steht 100 für ein Land mit der höchsten Arbeitslosenquote und 0 für ein Land mit der geringsten.</td>
+                    <td style="text-align:center">0</td>
+                    <td style="text-align:center">100</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #185177">Lebenserwartung</td>
+                    <td>Die Lebenserwartung gibt an, wie viele Jahre ein neugeborener Mensch im Durchschnitt leben wird, wenn die Lebensbedingungen sein ganzes Leben lang gleich bleiben würden. Die Lebenserwartung ist NICHT normiert.</td>
+                    <td style="text-align:center">53</td>
+                    <td style="text-align:center">85</td>
+                </tr>
+                 <tr>
+                    <td style="font-weight: bold; color: #185177">CO2-Emissionen</td>
+                    <td>Kohlendioxidemissionen stammen aus der Verbrennung fossiler Brennstoffe und der Herstellung von Zement. Die CO2-Emissionen wurden auf 100 normiert. Dabei steht 100 für ein Land mit den höchsten C02-Emissionen und 0 für ein Land mit den niedrigsten.</td>
+                    <td style="text-align:center">0</td>
+                    <td style="text-align:center">100</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #185177">Breitbandabonnements</td>
+                    <td>Feste Breitbandabonnements beziehen sich auf feste Abonnements (von Privatkunden und Unternehmen) für den Hochgeschwindigkeitszugang zum öffentlichen Internet. Dazu gehören bspw. Kabelmodem, DSL, oder Satellitenbreitband. Ausgeschlossen sind Abonnements,
+                        die Zugang zur Datenkommunikation (einschließlich Internet) über Mobilfunknetze haben.
+                        Die festen Breitbandabonnements (pro 100 Einwohner) wurden auf 100 normiert. Dabei steht 100 für ein Land mit den meisten festen Breitbandabonnements (pro 100 Einwohner) und 0 für ein Land mit den wenigsten.</td>
+                    <td style="text-align:center">0</td>
+                    <td style="text-align:center">100</td>
+                </tr>
+                 <tr>
+                    <td style="font-weight: bold; color: #185177">Grundschulabschlussquote (Mädchen)</td>
+                    <td>Die Grundschulabschlussquote von Mädchen beschreibt die Anzahl der Mädchen, die jedes Jahr die Grundschule abschließen im Verhältnis zur Bevölkerung im offiziellen Abschlussalter. Dabei steht 100 für ein Land mit der höchsten Grundschulabschlussquote von Mädchen und 0 für ein Land mit der niedrigsten. Je geringer der Wert, desto weniger Mädchen haben freien und verpflichtenden Zugang zur Grundschule (z.B. wegen Kinderarbeit).</td>
+                    <td style="text-align:center">0</td>
+                    <td style="text-align:center">100</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold; color: #185177">Hochschulbildungsquote</td>
+                    <td>Die Quote, der Abiturient*innen, die sich erfolgreich an einer Hochschule immatrikulieren. Dabei steht 100 für ein Land mit der höchsten Hochschulbildungsquote und 0 für ein Land mit der niedrigsten.</td>
+                    <td style="text-align:center">0</td>
+                    <td style="text-align:center">100</td>
+                </tr>
+            </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

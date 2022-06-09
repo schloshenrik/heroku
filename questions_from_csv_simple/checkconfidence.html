@@ -1,0 +1,49 @@
+
+{{ block title }}
+    Selbsteinschätzung
+{{ endblock }}
+{{ block content }}
+
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+    </style>
+
+    {{ formfield_errors 'confidence' }}
+    <p>Wie sicher sind Sie sich, dass Ihre Einschätzung innerhalb von eines Intervalls von 5 Punkten des korrekten Wertes liegt? </p>
+    <p>Dabei bedeutet 0, dass Sie sich komplett unsicher sind und 100 komplett sicher mit ihrer Einschätzung sind.</p>
+    <p>Bitte klicken Sie auf die blauen Balken, um die Schieberegler einzublenden.</p>
+
+    <div id="sliders_here"></div>
+
+    <script src="{{ static 'mgslider.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+
+            slider1 = new mgslider("confidence", 0, 100, 1);
+            slider1.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+    {{ next_button }}
+
+{{ endblock }}

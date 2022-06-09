@@ -1,0 +1,29 @@
+{{ block title }}
+    GDP Info
+{{ endblock }}
+
+{{ block content }}
+
+
+    <table class="table">
+        <tr>
+            <th>gdpcappredict</th>
+            <th>gdpcap19</th>
+            <th>broadband19</th>
+            <th>lifeexpecttotal19</th>
+            <th>solution</th>
+
+        </tr>
+        {{ for p in round_players }}
+        <tr>
+            <td>{{ p.gdpcappredict }}</td>
+            <td>{{ p.gdpcap19 }}</td>
+            <td>{{ p.broadband19 }}</td>
+            <td>{{ p.lifeexpecttotal19 }}</td>
+            <td>{{ p.solution }}</td>
+
+        </tr>
+        {{ endfor }}
+    </table>
+
+{{ endblock }}

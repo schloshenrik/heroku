@@ -1,0 +1,178 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Fragebogen{{ endblock }}
+
+{{ block content }}
+
+        <div style="text-align: justify;" class="card bg-light mb-3  ">
+            <div class="card-body">
+                <p>Bitte geben Sie an, inwieweit folgende Aussagen zutreffen:</p>
+
+            <br>
+
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Wie sehr haben Sie den Einschätzungen des Algorithmus während des Experimentes vertraut?
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="trustalgo" value="1" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="2" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="3" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="4" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="5" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="6" required></td>
+                            <td class="item"><input type="radio" name="trustalgo" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "überhaupt nicht vertraut" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "vollkommen vertraut" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+             <br>
+
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Wie sehr vertrauen Sie anderen Menschen im Allgemeinen?
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="trustothers" value="1" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="2" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="3" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="4" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="5" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="6" required></td>
+                            <td class="item"><input type="radio" name="trustothers" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left2">
+                                {% trans "überhaupt nicht" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right2">
+                                {% trans "vollkommen" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich vertraue Maschinen mehr als Menschen.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="algovshuman" value="1" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="2" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="3" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="4" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="5" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="6" required></td>
+                            <td class="item"><input type="radio" name="algovshuman" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                       Auch wenn der Algorithmus nützlich ist, fühle ich mich unwohl in zu verwenden.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="useful" value="1" required></td>
+                            <td class="item"><input type="radio" name="useful" value="2" required></td>
+                            <td class="item"><input type="radio" name="useful" value="3" required></td>
+                            <td class="item"><input type="radio" name="useful" value="4" required></td>
+                            <td class="item"><input type="radio" name="useful" value="5" required></td>
+                            <td class="item"><input type="radio" name="useful" value="6" required></td>
+                            <td class="item"><input type="radio" name="useful" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <br>
+        <!-- {{ next_button }}  -->
+        <button type="submit" class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+
+
+
+{{ endblock }}

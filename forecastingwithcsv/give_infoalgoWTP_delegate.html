@@ -1,0 +1,33 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+     Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+            <p>
+               Sie erhalten nun die Möglichkeit die <b>Schätzung des BIP pro Kopf an einen Algorithmus abzugeben</b>.
+            </p>
+            <p>Dem Algorithmus stehen genau die gleichen Informationen, wie Ihnen zur Verfügung. Dabei weichen XY % der Schätzungen des Algorithmus maximal 5 Punkte vom tatsächlichen BIP pro Kopf ab. [Alternativ: XY% der Schätzwerte des Algorithmus liegen in einem Intervall von [-5,+5] Punkten.] Der Algorithmus gibt die bestmögliche Einschätzung, kann aber zu einem gewissen Grad abweichen. Wenn Sie die Schätzung an den Algorithmus abgeben, wird dieser Wert als Schätzung für das BIP pro Kopf verwendet.</p>
+            <p>
+              Die <b>Abgabe der Schätzung an den Algorithmus kostet einen zufällig gewählten Betrag (zwischen 0 und 25 Talern)</b>, der Ihnen nicht bekannt ist. Wenn der Betrag, den Sie für die Abgabe der Schätzung zu zahlen bereit sind,
+                höher ist als der zufällig gewählte Preis, werden Sie diesen Preis zahlen und die Bestimmung des Schätzwertes wird an den Algorithmus abgegeben.
+                Ist Ihre Zahlungsbereitschaft niedriger als der Preis, wird die Schätzung nicht abgegeben und Sie müssen den Schätzwert selbst bestimmen.
+                Dadurch wird sichergestellt, dass Sie Ihre wahre Zahlungsbereitschaft angeben.
+
+                <p> Die Wahrscheinlichkeit, dass Sie die Schätzung an den Algorithmus abgeben können, steigt mit dem Betrag, den Sie zu zahlen bereit sind. Das Zahlungsschema ist so konzipiert, dass Sie Ihre <b>Auszahlung maximieren</b>, indem Sie Ihre <b>wahre Zahlungsbereitschaft</b> für die Abgabe der Schätzung an den Algorithmus <b>angeben</b>. </p>
+                <p> Nachdem Sie die nachfolgenden Kontrollfragen beantwortet haben, können Sie sich entscheiden, ob Sie die Schätzung an den Algorithmus abgeben möchten. </p>
+            </p>
+
+        </div>
+    </div>
+
+     <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+{{ endblock }}
+
+

@@ -1,0 +1,31 @@
+
+{{ block title }}
+Einschätzung des Algorithmus
+
+{{ endblock }}
+
+{{ block content }}
+
+<div>
+<p> ${{ wtp }}.</p>
+
+{{ if scenario_auc == 1 }}
+<p>Der randomisiert gezogene Preis für den Rat des Algorithmus beträgt ${{ dice }}. Dieser Preis ist höher als Ihre Zahlungsbereitschaft, daher erhalten sie nicht den Rat des Algorithmus. </p>
+{{ endif }}
+
+{{ if scenario_auc == 2 }}
+<p>Der randomisiert gezogene Preis für den Rat des Algorithmus beträgt ${{ dice }}, which is less than your bidding price. Dieser Preis ist geringer als Ihre Zahlungsbereitschaft, daher erhalten sie den Rat des Algorithmus.</p>
+
+    <p>Die Einschätzung des Algorithmus beträgt XY.</p>
+{{ endif }}
+
+
+<style>
+.otree-title {
+  font-size: 0;
+}
+
+</style>
+
+    {{ next_button }}
+{{ endblock }}

@@ -1,0 +1,66 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+
+    Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+
+{{ endblock }}
+{{ block content }}
+
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #185177;
+        }
+        .mgslider-after {
+
+            background: #185177;
+        }
+    </style>
+
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+            {{ formfield_errors 'confidencealgo' }}
+
+            <p>Ihr Schätzwert für das BIP pro Kopf von Land {{ player.round_number }} beträgt: {{ player.initialguess }}</p>
+            <p>Der Schätzwert des Algorithmus für das BIP pro Kopf von Land {{ player.round_number }} beträgt: {{ player.gdpcap }}</p>
+            <p> <b> Wie hoch ist das Vertrauen in Ihre Schätzung? </b> </p>
+            <p>Dabei bedeutet 0, dass Sie Ihrer Schätzung überhaupt nicht trauen und 100, dass Sie sich komplett sicher mit ihrer Einschätzung sind.</p>
+            <p>Bitte klicken Sie auf die blauen Balken, um die Schieberegler einzublenden.</p>
+
+            <div id="sliders_here"></div>
+
+            <script src="{{ static 'mgslider.js' }}"></script>
+
+            <script>
+                $(document).ready(function (event) {
+
+                    slider1 = new mgslider("confidencealgo", 0, 100, 1);
+                    slider1.print(document.getElementById("sliders_here"));
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+{{ endblock }}

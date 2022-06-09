@@ -1,0 +1,19 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+    Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+            <p><b>Die Einschätzung des Algorithmus beträgt: {{player.gdpcap }}</b></p>
+        </div>
+    </div>
+
+    <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+{{ endblock }}
+

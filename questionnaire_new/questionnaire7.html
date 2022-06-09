@@ -1,0 +1,22 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Fragebogen{{ endblock }}
+
+{{ block content }}
+
+        <div style="text-align: justify;" class="card bg-light mb-3  ">
+
+            <div class="card-body">
+                <p>{{ formfields }} </p>
+            </div>
+
+        </div>
+        <br>
+        <!-- {{ next_button }}  -->
+        <button type="submit" class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+
+
+
+
+{{ endblock }}

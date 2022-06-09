@@ -1,0 +1,98 @@
+/* Style for the title */
+.otree-title {
+    color: #185177;
+    text-align: center;
+}
+
+
+/* Style for the next-button */
+.button1 {
+    background-color: #185177;
+    color: white;
+    border: none;
+}
+.button1:hover {
+    background-color: grey;
+    color: white;
+}
+
+
+/* Style for Likert Scale */
+.card-title {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.likert {
+    margin: 20px auto 30px;
+}
+
+.survey-question {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.item {
+    width: 125px;
+    text-align: center;
+}
+
+.item-label {
+    font-size: 0.7em;
+    text-align: center;
+    font-style: italic;
+    padding: 0;
+}
+
+.item-label-left {
+    font-size: 0.7em;
+    text-align: left;
+    font-style: italic;
+    padding: 0;
+    padding-left: 2px;
+}
+
+.item-label-left2 {
+    font-size: 0.7em;
+    text-align: left;
+    font-style: italic;
+    padding: 0;
+    padding-left: 17px;
+}
+
+.item-label-right {
+    font-size: 0.7em;
+    text-align: right;
+    font-style: italic;
+    padding: 0;
+    padding-right: 12px;
+}
+
+.item-label-right2 {
+    font-size: 0.7em;
+    text-align: right;
+    font-style: italic;
+    padding: 0;
+    padding-right: 30px;
+}
+
+.item-label-right3 {
+    font-size: 0.7em;
+    text-align: right;
+    font-style: italic;
+    padding: 0;
+    
+}
+
+
+.card-title {
+    font-style: italic;
+    font-weight: 400;
+
+}
+
+
+
+
+
+

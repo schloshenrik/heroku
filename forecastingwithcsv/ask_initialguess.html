@@ -1,0 +1,143 @@
+{{ extends 'global/Page.html' }}
+
+{{ block title }}
+     Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+
+{{ block content }}
+    <style>
+           /* Style for the more info-button */
+        .button2 {
+            background-color: #6288A6;
+            color: white;
+            border: none;
+            width: 200px;
+        }
+        .button2:hover {
+            background-color: #53697A;
+            color: white;
+        }
+        .visited {
+            background-color: #6288A6;
+            color: white;
+            border: none;
+            width: 200px;
+        }
+
+         /* Style for button next to the table */
+        .float-container {
+            border: 3px ;
+            padding: 20px;
+        }
+
+        .float-child {
+
+            float: left;
+            padding: 20px;
+            border: 2px ;
+        }
+        .container {
+          height: 200px;
+          position: relative;
+
+        }
+        .vertical-center {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+
+    </style>
+
+    <script>
+        var clicks = 0;
+        function onClick(event) {
+            event.className = "button visited";
+            if (clicks >= 2) {
+             alert("WRONG! YOU LOSE! TRY AGAIN!");
+             // window.location.href = 'index.html';
+            }
+             clicks += 1;
+             // document.getElementById("clicks").innerHTML = clicks;
+        };
+    </script>
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+
+           <p>
+             Sie erhalten die folgenden Informationen zu Land {{ player.round_number}}.
+               Das normierte BIP pro Kopf kann zwischen 0 und 100 liegen. Dabei beschreibt 100 das größte und 0 das niedrigste BIP pro Kopf.
+           </p>
+
+            <p> Welches BIP pro Kopf hat das Land mit diesen Daten?</p>
+
+
+              <div class="float-container">
+
+              <div style="width: 55%;" class="float-child">
+                <div class="green">
+                    <table class="table" style="width: 90%">
+                    <tr>
+                        <td><b>Variable</b></td>
+                        <td style="text-align: center"><b>Wert</b></td>
+                    </tr>
+                    <tr>
+                        <td>Arbeitslosenquote</td>
+                        <td style="text-align: center">{{ player.unemployment }}</td>
+                    </tr>
+                    <tr>
+                        <td>Lebenserwartung</td>
+                        <td style="text-align: center">{{ player.lifeexpecttotal }}</td>
+                    </tr>
+                    <tr>
+                        <td>C02-Emissionen</td>
+                        <td style="text-align: center">{{ player.co2em }}</td>
+                    </tr>
+                    <tr>
+                        <td>Breitbandabonnements</td>
+                        <td style="text-align: center">{{ player.broadband }}</td>
+                    </tr>
+                    <tr>
+                        <td>Grundschulabschlussquote (Mädchen)</td>
+                        <td style="text-align: center">{{ player.primarycompletefem }}</td>
+                    </tr>
+                    <tr>
+                        <td>Hochschulbildungsquote</td>
+                        <td style="text-align: center">{{ player.enrollmenttertiary }}</td>
+                    </tr>
+                </table>
+                </div>
+              </div>
+
+              <div style="width:45%;" class="float-child container">
+                <div>
+                    <div class="col-md-12 text-center vertical-center">
+                <button type="button" class="btn btn-primary button2" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="onClick(this)">
+                 Mehr Informationen
+                </button>
+                    </div>
+
+                </div>
+              </div>
+
+            </div>
+
+
+            <br>
+
+             <!-- Modal Popup-->
+            {{ include C.REVIEW_INSTRUCTIONS }}
+
+            <b>{{formfields}}</b>
+
+        </div>
+    </div>
+
+    <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+{{ endblock }}

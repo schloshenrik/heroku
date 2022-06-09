@@ -1,0 +1,27 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Kontrollfragen{{ endblock }}
+
+{{ block content }}
+
+         <div style="text-align: justify;" class="card bg-light mb-3  ">
+            <div class="card-body">
+            <p><strong>Wenn ich die Einschätzung an den Algorithmus delegiere, kann ich die finale Einschätzung ändern.</strong></p>
+            </div>
+
+            {{ if player.changedelegation == False  }}
+            <p class="alert alert-success">Richtig! Wenn Sie die Einschätzung an den Algorithmus delegieren, wird die Einschätzung des Algorithmus als finale Einschätzung verwendet.</p>
+            {{ else }}
+            <p class="alert alert-danger">Falsch! Wenn Sie die Einschätzung an den Algorithmus delegieren, wird die Einschätzung des Algorithmus als finale Einschätzung verwendet.</p>
+            {{ endif }}
+
+         </div>
+             <br>
+
+
+              <!-- Weiter-Button  -->
+            <p>
+                <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+            </p>
+
+
+{{ endblock }}

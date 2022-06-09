@@ -1,0 +1,100 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Fragebogen{{ endblock }}
+
+{{ block content }}
+
+        <div style="text-align: justify;" class="card bg-light mb-3  ">
+                            <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Waren die Anleitungen des Experimentes verständlich?
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="comprehension" value="0" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="1" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="2" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="3" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="4" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="5" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "überhaupt nicht verständlich" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "vollkommen verständlich" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+             <br>
+
+            <div class="card-body">
+
+                    <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Waren die Anleitungen des Experimentes verständlich?
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        <tr>
+                            <td class="item"><input type="radio" name="comprehension" value="1" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="2" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="3" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="4" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="5" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="6" required></td>
+                            <td class="item"><input type="radio" name="comprehension" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left2">
+                                {% trans "überhaupt nicht" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right2">
+                                {% trans "vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+                <p>{{ formfield 'choicealgo' }} </p>
+            </div>
+
+        </div>
+        <br>
+        <!-- {{ next_button }}  -->
+        <button type="submit" class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+
+
+
+
+{{ endblock }}

@@ -1,0 +1,46 @@
+{{ block title }}
+    Sliders
+{{ endblock }}
+{{ block content }}
+
+    <style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+    </style>
+
+    {{ formfield_errors 'confidence' }}
+    <p>Click the blue bars to reveal the sliders.</p>
+
+    <div id="sliders_here"></div>
+
+    <script src="{{ static 'mgslider.js' }}"></script>
+
+    <script>
+        $(document).ready(function (event) {
+
+            slider2 = new mgslider("confidence", 0, 100, 1);
+            slider2.print(document.getElementById("sliders_here"));
+        });
+    </script>
+
+    {{ next_button }}
+
+{{ endblock }}

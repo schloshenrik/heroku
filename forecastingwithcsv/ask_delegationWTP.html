@@ -1,0 +1,36 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+     Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+            <p>
+                Sie haben sich dazu entschieden die <b>Schätzung an den Algorithmus abzugeben</b>.
+            </p>
+
+
+            <p>
+                Die <b>Abgabe der Schätzung an den Algorithmus kostet einen zufällig bestimmten Betrag (zwischen 0 und 25 Talern)</b>, der Ihnen nicht bekannt ist. Wenn der Betrag, den Sie für die Abgabe der Schätzung zu zahlen bereit sind, höher ist als der zufällig gewählte Preis, werden Sie diesen Preis zahlen und die Schätzung des BIP pro Kopf wird an den Algorithmus abgeben.
+                Ist Ihre Zahlungsbereitschaft niedriger als der Preis, müssen Sie die den Schätzwert des BIP pro Kopf selbst bestimmen.
+                Dadurch wird sichergestellt, dass Sie Ihre wahre Zahlungsbereitschaft angeben. </p>
+                <p>Die Wahrscheinlichkeit, dass Sie die Schätzung an den Algorithmus abgeben können, steigt mit dem Betrag, den Sie zu zahlen bereit sind. Das Zahlungsschema ist so konzipiert, dass Sie Ihre <b>Auszahlung maximieren</b>,
+                    indem Sie Ihre <b>wahre Zahlungsbereitschaft</b> für die Abgabe der Schätzung an den Algorithmus <b>angeben</b>.
+            </p>
+
+
+            <p><b> Bitte geben Sie Ihre Zahlungsbereitschaft für die Abgabe der Schätzung an den Algorithmus an: </b></p>
+            {{ formfields }}
+
+        </div>
+    </div>
+
+     <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+{{ endblock }}
+
+

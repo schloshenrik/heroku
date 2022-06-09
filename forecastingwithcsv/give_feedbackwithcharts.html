@@ -1,0 +1,134 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}
+    Schätzung des BIP pro Kopf - Land {{ player.round_number }} von {{ C.NUM_ROUNDS }}
+{{ endblock }}
+
+
+{{ block content }}
+<style>
+    .float-container {
+    border: 3px ;
+    padding: 20px;
+}
+
+.float-child {
+    background-color: white;
+    float: left;
+    padding: 20px;
+    border: 2px ;
+}
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<div style="text-align: justify;" class="card bg-light mb-3  ">
+    <div class="card-body">
+            <p>In dieser Graphik sehen Sie Ihren <b> Schätzwert ({{ player.finalguess }})</b>, das <b>tatsächliche BIP pro Kopf ({{ player.gdpcap }})</b> sowie das <b>Vertrauen in Ihre Schätzung ({{ player.confidence }} %)</b> für Land {{player.round_number}}.</p>
+            <br>
+
+            <div class="float-container">
+
+
+              <div style="width: 70%; " class="float-child">
+                <div class="green">
+                    <canvas id="myChart1" style="width:100%; height:200px" ></canvas>
+
+                </div>
+              </div>
+
+              <div style="width: 30%;" class="float-child">
+                <div class="blue">
+                    <div style=" margin-bottom: 100px">
+                        <canvas id="myChart2" style="width:100%; height:100px"></canvas>
+                    </div>
+                </div>
+              </div>
+
+
+            </div>
+
+    </div>
+</div>
+
+
+
+
+<script>
+
+         //BAR CHART
+
+            let var1 = js_vars.finalguess;
+            let var2 = js_vars.gdpcap
+
+
+            var xValues = ["Ihre finale Schätzung", "Wahrer Wert"];
+            var yValues = [var1, var2];
+            var barColors = ["#5A9CA6", "#6288A6"];
+
+
+            new Chart("myChart1", {
+              type: "horizontalBar",
+              data: {
+              labels: xValues,
+              datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+              }],
+
+            },
+              options: {
+                legend: {display: false},
+                title: {
+                  display: true,
+                  text: "Ergebnis"
+                },
+                scales: {
+                  xAxes: [{ticks: {min: 0, max:100}}]
+                }
+              }
+            });
+
+        //PIE CHART 1
+            let var3 = js_vars.finalconfidence;
+
+            //var xValuesPie = ["Vertrauen in Ihre Schätzung", "",];
+            var yValuesPie = [var3, 100-var3];
+            var pieColors = [
+              "#185177",
+              "white",
+            ];
+
+            new Chart("myChart2", {
+              type: "pie",
+              data: {
+                //labels: xValuesPie,
+                datasets: [{
+                  backgroundColor: pieColors,
+                    borderColor : "#185177",
+                  data: yValuesPie
+                }]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: "Vertrauen in Ihre Schätzung"
+                }
+              }
+            });
+
+
+
+
+</script>
+
+
+
+    <br>
+    <!-- {{ next_button }}  -->
+    <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+{{ endblock }}
+
+
+

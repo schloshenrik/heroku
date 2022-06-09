@@ -1,0 +1,59 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Instruktionen{{ endblock }}
+
+{{ block content }}
+
+    <div style="text-align: justify;" class="card bg-light mb-3  ">
+        <div class="card-body">
+
+            Die <b>Boni</b>, die Sie <b>abhängig</b> von der <b>Genauigkeit</b> Ihres Schätzwerts zum tatsächlichen BIP pro Kopf erhalten können, sind wie folgt:
+
+            <br><br>
+            <table class="table" style="text-align: center">
+                <tr>
+                    <th>Intervall innerhalb dessen Ihre Schätzung vom tatsächlichen BIP pro Kopf entfernt ist:</th>
+                    <th>Gewinn in Talern</th>
+                </tr>
+                <tr>
+                    <td>[-5,+5]</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>[-10,+10]</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>[-15,+15]</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>[-20,+20]</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>[-25,+25]</td>
+                    <td>10</td>
+                </tr>
+            </table>
+
+            <br>
+            <p><b>Beispiel: </b><br>
+                Wenn Sie als Einschätzung für das BIP pro Kopf 45 angeben und das tatsächliche BIP pro Kopf 53 beträgt, liegt Ihre Einschätzung innerhalb des [-10,+10]-Intervalls des wahren Wertes.
+                Somit beträgt Ihr Gewinn 40 Taler.
+            </p>
+            <p>Am Ende wird die Schätzung für ein Land zufällig bestimmt und der Gewinn für diese Schätzung ausbezahlt.</p>
+        </div>
+    </div>
+
+
+
+
+            <!-- {{ next_button }}  -->
+        <br>
+        <button class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+
+
+
+{{ endblock }}

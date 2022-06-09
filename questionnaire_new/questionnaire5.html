@@ -1,0 +1,297 @@
+{{ extends 'global/Page.html' }}
+   {{ block title }}Fragebogen{{ endblock }}
+
+{{ block content }}
+
+        <div style="text-align: justify;" class="card bg-light mb-3  ">
+            <div class="card-body">
+                <p>Bitte geben Sie an, inwieweit folgende Aussagen zutreffen:</p>
+
+            <br>
+
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Versuchen Sie Risiken zu vermeiden oder sind Sie generell ein risikobereiter Mensch?
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="risk" value="1" required></td>
+                            <td class="item"><input type="radio" name="risk" value="2" required></td>
+                            <td class="item"><input type="radio" name="risk" value="3" required></td>
+                            <td class="item"><input type="radio" name="risk" value="4" required></td>
+                            <td class="item"><input type="radio" name="risk" value="5" required></td>
+                            <td class="item"><input type="radio" name="risk" value="6" required></td>
+                            <td class="item"><input type="radio" name="risk" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "Ich vermeide Risiken immer." %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right3">
+                                {% trans "Ich bin immer sehr risikobereit." %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+             <br>
+
+             <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich halte den Algorithmus für kompetent.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="competence" value="1" required></td>
+                            <td class="item"><input type="radio" name="competence" value="2" required></td>
+                            <td class="item"><input type="radio" name="competence" value="3" required></td>
+                            <td class="item"><input type="radio" name="competence" value="4" required></td>
+                            <td class="item"><input type="radio" name="competence" value="5" required></td>
+                            <td class="item"><input type="radio" name="competence" value="6" required></td>
+                            <td class="item"><input type="radio" name="competence" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich delegiere eine Aufgabe lieber als einen Ratschlag zu erhalten.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="supporttype" value="1" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="2" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="3" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="4" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="5" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="6" required></td>
+                            <td class="item"><input type="radio" name="supporttype" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich erledige wichtige Aufgaben gerne selbst.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="importance" value="1" required></td>
+                            <td class="item"><input type="radio" name="importance" value="2" required></td>
+                            <td class="item"><input type="radio" name="importance" value="3" required></td>
+                            <td class="item"><input type="radio" name="importance" value="4" required></td>
+                            <td class="item"><input type="radio" name="importance" value="5" required></td>
+                            <td class="item"><input type="radio" name="importance" value="6" required></td>
+                            <td class="item"><input type="radio" name="importance" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Bitte kreuzen Sie als Antwort "trifft überhaupt nicht zu" an. Diese Frage testet, ob Sie die Anweisungen und Fragen aufmerksam lesen.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="testquestion" value="1" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="2" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="3" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="4" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="5" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="6" required></td>
+                            <td class="item"><input type="radio" name="testquestion" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                  <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich gebe eine Aufgabe lieber an einen Menschen als an einen Algorithmus ab.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="1" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="2" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="3" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="4" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="5" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="6" required></td>
+                            <td class="item"><input type="radio" name="supporthumanalgo" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                  <br>
+                <p class="survey-question">
+                    {% blocktrans trimmed %}
+                        Ich gebe eine Aufgabe lieber ab, als sie selbst erledigen.
+                    {% endblocktrans %}
+                </p>
+
+                <table class="likert">
+                    <tbody>
+                        <tr>
+                            <td class="item-label">1</td>
+                            <td class="item-label">2</td>
+                            <td class="item-label">3</td>
+                            <td class="item-label">4</td>
+                            <td class="item-label">5</td>
+                            <td class="item-label">6</td>
+                            <td class="item-label">7</td>
+                        </tr>
+                        <tr>
+                            <td class="item"><input type="radio" name="selfvsother" value="1" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="2" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="3" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="4" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="5" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="6" required></td>
+                            <td class="item"><input type="radio" name="selfvsother" value="7" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="item-label-left">
+                                {% trans "trifft überhaupt nicht zu" %}
+                            </td>
+                            <td></td>
+                            <td colspan="3" class="item-label-right">
+                                {% trans "trifft vollkommen zu" %}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <br>
+        <!-- {{ next_button }}  -->
+        <button type="submit" class="otree-btn-next btn btn-primary button1" style="float: right;">Weiter</button>
+
+
+
+
+
+{{ endblock }}

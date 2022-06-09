@@ -1,0 +1,30 @@
+{{ extends "global/Page.html" }}
+{{ load otree static }}
+
+{{ block title }}
+Your Payment
+
+{{ endblock }}
+
+{{ block content }}
+
+<div>
+<p>Your bidding price for this lottery is ${{ wtp }}.</p>
+
+{{ if scenario_auc == 1 }}
+<p>The generated selling price is ${{ dice }}, which is greater than your bidding price. Therefore, you did not purchase the item.</p>
+{{ endif }}
+
+{{ if scenario_auc == 2 }}
+<p>The generated selling price is ${{ dice }}, which is less than your bidding price. Therefore, you purchased the item.</p>
+{{ endif }}
+
+
+<style>
+.otree-title {
+  font-size: 0;
+}
+
+</style>
+
+{{ endblock }}
